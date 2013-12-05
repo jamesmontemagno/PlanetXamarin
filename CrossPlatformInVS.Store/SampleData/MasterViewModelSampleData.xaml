@@ -1,0 +1,17 @@
+﻿<ViewModels:MasterViewModel xmlns:ViewModels="using:CrossPlatformInVS.Portable.ViewModels" xmlns:Models="using:CrossPlatformInVS.Portable.Models">
+	<ViewModels:MasterViewModel.FeedItems>
+		<Models:RSSFeedItem Description="Vestibulum maecenas" Id="66" Link="Cras curae duis" PublishDate="Adipiscing integer" Title="Aliquam class"/>
+		<Models:RSSFeedItem Description="Sed dis parturient quisque" Id="78" Link="Etiam vestibulum" PublishDate="Amet consequat" Title="Curabitur nunc nam donec phasellus"/>
+		<Models:RSSFeedItem Description="Vestibulum arcu" Id="67" Link="Vivamus adipiscing aenean aliquam" PublishDate="Hac mauris lorem" Title="Praesent accumsan fusce est ante"/>
+		<Models:RSSFeedItem Description="Parturient blandit bibendum vestibulum morbi" Id="99" Link="Dignissim diam nulla vestibulum adipiscing" PublishDate="Mus nullam dictumst" Title="Leo convallis aliquet"/>
+		<Models:RSSFeedItem Description="Elementum eleifend eget" Id="44" Link="Augue nec" PublishDate="Elit enim facilisis non parturient" Title="Aptent proin auctor"/>
+		<Models:RSSFeedItem Description="Facilisi per sed sem cursus" Id="74" Link="Dictum lectus vestibulum dolor vestibulum" PublishDate="Eros fringilla nibh sit vel" Title="Fermentum commodo erat congue"/>
+		<Models:RSSFeedItem Description="Conubia habitant habitasse libero" Id="67" Link="Cubilia hendrerit" PublishDate="Felis himenaeos imperdiet ligula adipiscing" Title="Nam fames sed nisi faucibus"/>
+		<Models:RSSFeedItem Description="Est ipsum egestas" Id="68" Link="Parturient vestibulum" PublishDate="Vestibulum adipiscing" Title="Inceptos dis dapibus nisl"/>
+		<Models:RSSFeedItem Description="Odio orci parturient pede" Id="83" Link="Malesuada hac euismod" PublishDate="Interdum lacus feugiat penatibus leo" Title="Justo nunc"/>
+		<Models:RSSFeedItem Description="Lacinia mus vestibulum vestibulum" Id="80" Link="Laoreet porttitor nascetur" PublishDate="Tincidunt nec pharetra" Title="Quam lobortis gravida iaculis quis"/>
+	</ViewModels:MasterViewModel.FeedItems>
+	<ViewModels:MasterViewModel.SelectedFeedItem>
+		<Models:RSSFeedItem Description="Magna natoque massa" Id="98" Link="Metus adipiscing per" PublishDate="Sed tristique ultricies morbi neque" Title="Placerat non lorem pulvinar sagittis"/>
+	</ViewModels:MasterViewModel.SelectedFeedItem>
+</ViewModels:MasterViewModel>

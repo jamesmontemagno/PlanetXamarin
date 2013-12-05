@@ -86,12 +86,12 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BlogViewController.cs" />
+    <Compile Include="DetailViewController.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="app.config" />
     <None Include="Info.plist" />
-    <Compile Include="MasterView.cs" />
+    <Compile Include="MasterViewController.cs" />
     <Compile Include="PlatformSpecific\TouchSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

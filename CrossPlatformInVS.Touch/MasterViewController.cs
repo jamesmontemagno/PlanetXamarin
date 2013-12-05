@@ -10,10 +10,11 @@ namespace CrossPlatformInVS.Touch
    
 
     [Register("MasterView")]
-    public class MasterView : UITableViewController, IUITableViewDataSource
+    public class MasterViewController : UITableViewController, IUITableViewDataSource
     {
         private MasterViewModel viewModel;
-        public MasterView()
+
+        public MasterViewController()
         {
             viewModel = new MasterViewModel();
         }
@@ -61,7 +62,7 @@ namespace CrossPlatformInVS.Touch
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            NavigationController.PushViewController(new BlogViewController(viewModel.FeedItems[indexPath.Row]), true);
+            NavigationController.PushViewController(new DetailViewController(viewModel.FeedItems[indexPath.Row]), true);
         }
     }
 }

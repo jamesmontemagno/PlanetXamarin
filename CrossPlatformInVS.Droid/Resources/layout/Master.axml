@@ -4,10 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<Button  
-    android:id="@+id/MyButton"
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/Hello"
-    />
+<ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list" />
 </LinearLayout>

@@ -11,5 +11,6 @@ namespace CrossPlatformInVS.Portable.Models
         public string Description { get; set; }
         public string Link { get; set; }
         public string PublishDate { get; set; }
+        public int Id { get; set; }
     }
 }
