@@ -121,10 +121,10 @@ namespace CrossPlatformInVS.Droid
 			public const int ic_errorstatus = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_successstatus = 2130837505;
+			public const int ic_launcher = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int ic_successstatus = 2130837506;
 			
 			// aapt resource value: 0x7f020003
 			public const int roundedbg = 2130837507;
@@ -145,17 +145,20 @@ namespace CrossPlatformInVS.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050002
-			public const int loadingImage = 2131034114;
-			
-			// aapt resource value: 0x7f050000
-			public const int loadingProgressBar = 2131034112;
-			
 			// aapt resource value: 0x7f050003
-			public const int loadingProgressWheel = 2131034115;
+			public const int loadingImage = 2131034115;
 			
 			// aapt resource value: 0x7f050001
-			public const int textViewStatus = 2131034113;
+			public const int loadingProgressBar = 2131034113;
+			
+			// aapt resource value: 0x7f050004
+			public const int loadingProgressWheel = 2131034116;
+			
+			// aapt resource value: 0x7f050002
+			public const int textViewStatus = 2131034114;
+			
+			// aapt resource value: 0x7f050000
+			public const int webview = 2131034112;
 			
 			static Id()
 			{
@@ -198,11 +201,8 @@ namespace CrossPlatformInVS.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040002
-			public const int ApplicationName = 2130968578;
-			
 			// aapt resource value: 0x7f040001
-			public const int Hello = 2130968577;
+			public const int app_name = 2130968577;
 			
 			// aapt resource value: 0x7f040000
 			public const int library_name = 2130968576;

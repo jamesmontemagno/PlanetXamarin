@@ -1,12 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using CrossPlatformInVS.Portable.Models;
@@ -40,11 +34,17 @@ namespace CrossPlatformInVS.Droid.Adapters
 		}
 
 		public override long GetItemId (int position)
-		{
-			return position;
+    {
+      var item = items.ElementAt(position);
+			return item.Id;
 		}
 
-		public override View GetView (int position, View convertView, ViewGroup parent)
+    public override bool HasStableIds
+    {
+      get { return true; }
+    }
+
+    public override View GetView (int position, View convertView, ViewGroup parent)
 		{
 			FeedItemAdapterHelper helper = null;
 			if (convertView == null) {
@@ -52,6 +52,8 @@ namespace CrossPlatformInVS.Droid.Adapters
 				helper = new FeedItemAdapterHelper ();
         helper.Title = convertView.FindViewById<TextView>(Android.Resource.Id.Text1);
         helper.Description = convertView.FindViewById<TextView>(Android.Resource.Id.Text2);
+        helper.Title.SetMaxLines(2);
+        helper.Description.SetMaxLines(2);
         convertView.Tag = helper;
 			} else {
 				helper = convertView.Tag as FeedItemAdapterHelper;
