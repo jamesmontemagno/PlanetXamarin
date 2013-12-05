@@ -1,41 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Navigation;
+using CrossPlatformInVS.Portable.Models;
+using CrossPlatformInVS.Portable.ViewModels;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using CrossPlatformInVS.Phone.Resources;
 
 namespace CrossPlatformInVS.Phone
 {
-    public partial class MainPage : PhoneApplicationPage
+  public partial class MainPage : PhoneApplicationPage
+  {
+    private static MasterViewModel viewModel;
+
+    public static MasterViewModel ViewModel
     {
-        // Constructor
-        public MainPage()
-        {
-            InitializeComponent();
-
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
-        }
-
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
-
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
-
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+      get { return viewModel ?? (viewModel = new MasterViewModel()); }
     }
+    // Constructor
+    public MainPage()
+    {
+      InitializeComponent();
+      this.Loaded += OnLoaded;
+    }
+
+    private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+    {
+      DataContext = ViewModel;
+
+      ((ApplicationBarIconButton) ApplicationBar.Buttons[0]).Click += (o, args) => {
+        ViewModel.LoadItemsCommand.Execute(null);
+      };
+
+    }
+
+    private void FeedList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+      if (FeedList.SelectedItem == null)
+        return;
+
+      ViewModel.SelectedFeedItem = (RSSFeedItem)FeedList.SelectedItem;
+
+      NavigationService.Navigate(new Uri("/DetailsPage.xaml?id=" + ViewModel.SelectedFeedItem.Id, UriKind.Relative));
+      FeedList.SelectedItem = null;
+    }
+  }
 }

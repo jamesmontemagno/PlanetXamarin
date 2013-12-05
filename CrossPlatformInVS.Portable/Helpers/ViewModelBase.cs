@@ -17,5 +17,16 @@ namespace CrossPlatformInVS.Portable.Helpers
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
             }
         }
+
+      private bool isBusy;
+
+      /// <summary>
+      /// Gets or sets if the View Model is busy
+      /// </summary>
+      public bool IsBusy
+      {
+        get { return isBusy; }
+        set { isBusy = value; OnPropertyChanged("IsBusy"); }
+      }
     }
 }

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -48,15 +50,31 @@ namespace CrossPlatformInVS.Portable.ViewModels
 
     public async Task ExecuteLoadItemsCommand()
     {
-      var httpClient = new HttpClient();
-      var responseString = await httpClient.GetStringAsync("http://planet.xamarin.com/feed/");
-
-      FeedItems.Clear();
-      var items = await ParseFeed(responseString);
-      foreach (var item in items)
+      if (IsBusy)
+        return;
+      IsBusy = true;
+      try
       {
-        FeedItems.Add(item);
+
+        var httpClient = new HttpClient();
+        var responseString = await httpClient.GetStringAsync("http://planet.xamarin.com/feed/");
+
+        FeedItems.Clear();
+        var items = await ParseFeed(responseString);
+        foreach (var item in items)
+        {
+          FeedItems.Add(item);
+        }
+
+        CrossPlatformMessage.Instance.SendMessage("Success!!!!");
+
       }
+      catch (Exception ex)
+      {
+        Debug.WriteLine("Unable to load feed: " + ex);
+        CrossPlatformMessage.Instance.SendMessage("Unable to load planet feed.", "Error");
+      }
+      IsBusy = false;
     }
 
     
