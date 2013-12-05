@@ -31,6 +31,9 @@ namespace CrossPlatformInVS.Phone
         ViewModel.LoadItemsCommand.Execute(null);
       };
 
+      if(ViewModel.FeedItems.Count == 0)
+        ViewModel.LoadItemsCommand.Execute(null);
+
     }
 
     private void FeedList_SelectionChanged(object sender, SelectionChangedEventArgs e)

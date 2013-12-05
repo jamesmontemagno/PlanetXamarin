@@ -15,7 +15,7 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar>
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/share.png" IsEnabled="True" Text="share"/>
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/upload.png" IsEnabled="True" Text="open ie"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/upload.png" IsEnabled="True" Text="full article"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 

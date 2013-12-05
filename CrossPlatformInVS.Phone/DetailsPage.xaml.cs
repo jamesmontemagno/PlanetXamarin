@@ -1,7 +1,10 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Text;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Navigation;
+using CrossPlatformInVS.Phone.PlatformSpecific;
 using CrossPlatformInVS.Portable.Models;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
@@ -30,11 +33,7 @@ namespace CrossPlatformInVS.Phone
         };
 
         ((ApplicationBarIconButton)ApplicationBar.Buttons[1]).Click += (o, args) => {
-          var task = new WebBrowserTask
-          {
-            Uri = new Uri(item.Link, UriKind.Absolute)
-          };
-          task.Show();
+          Browser.Navigate(new Uri(item.Link, UriKind.Absolute));
         };
       }
 
@@ -49,9 +48,12 @@ namespace CrossPlatformInVS.Phone
           int.TryParse(idString, out id);
           item = MainPage.ViewModel.GetFeedItem(id);
           DataContext = item;
-          Browser.NavigateToString(item.Description);
+          var fullHtml = WebBrowserHelper.WrapHtml(item.Description, Browser.ActualWidth);
+          Browser.NavigateToString(fullHtml);
         }
       }
+
+
 
       protected override void OnBackKeyPress(CancelEventArgs e)
       {

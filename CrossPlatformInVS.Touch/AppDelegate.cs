@@ -27,7 +27,7 @@ namespace CrossPlatformInVS.Touch
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 
-            Portable.Helpers.CrossPlatfromSettings.Instance = new TouchSettings();
+            Portable.Helpers.CrossPlatformMessage.Instance = new Message();
             // create a new window instance based on the screen size
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 

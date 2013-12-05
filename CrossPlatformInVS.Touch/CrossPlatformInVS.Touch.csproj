@@ -92,8 +92,7 @@
     <None Include="app.config" />
     <None Include="Info.plist" />
     <Compile Include="MasterViewController.cs" />
-    <Compile Include="PlatformSpecific\TouchSettings.cs" />
-    <Compile Include="MasterView.cs" />
+    <Compile Include="PlatformSpecific\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,14 +102,36 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="PlatformSpecific\" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.8\lib\ios\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="GCDiscreetNotification">
+      <HintPath>..\Components\gcdiscreetnotification-1.0\lib\ios\GCDiscreetNotification.dll</HintPath>
+    </Reference>
     <Reference Include="MonoTouch.Dialog-1" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="btprogresshud">
+      <Visible>False</Visible>
+      <Version>1.8</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="gcdiscreetnotification">
+      <Visible>False</Visible>
+      <Version>1.0</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-60%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
