@@ -56,7 +56,7 @@ namespace CrossPlatformInVS.Phone
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
-            Portable.Helpers.CrossPlatfromSettings.Instance = new WindowsPhoneSettings();
+            Portable.Helpers.CrossPlatformMessage.Instance = new Message();
         }
 
         // Code to execute when the application is launching (eg, from Start)

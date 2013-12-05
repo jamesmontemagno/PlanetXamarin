@@ -93,6 +93,7 @@
     <None Include="Info.plist" />
     <Compile Include="MasterViewController.cs" />
     <Compile Include="PlatformSpecific\TouchSettings.cs" />
+    <Compile Include="MasterView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +103,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="PlatformSpecific\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoTouch.Dialog-1" />

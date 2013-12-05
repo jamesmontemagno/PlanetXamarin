@@ -55,6 +55,8 @@
     <Compile Include="DetailActivity.cs" />
     <Compile Include="MasterActivity.cs" />
     <Compile Include="PlatformSpecific\DroidSettings.cs" />
+    <Compile Include="Activity1.cs" />
+    <Compile Include="PlatformSpecific\Message.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

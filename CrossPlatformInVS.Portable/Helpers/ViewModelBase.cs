@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CrossPlatformInVS.Portable.ViewModels
+namespace CrossPlatformInVS.Portable.Helpers
 {
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
