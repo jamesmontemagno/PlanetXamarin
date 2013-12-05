@@ -36,6 +36,7 @@ obj/
 [Rr]elease*/
 [Pp]ackages/
 Ankh.NoLoad
+[Cc]omponents
 
 #Tooling
 _ReSharper*/

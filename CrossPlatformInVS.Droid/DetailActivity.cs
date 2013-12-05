@@ -17,6 +17,7 @@ namespace CrossPlatformInVS.Droid
     private RSSFeedItem feedItem;
     private TextView articleTextView;
     private ScrollView contentScrollView;
+    private Button readFullButton;
     protected override void OnCreate(Bundle bundle)
     {
       base.OnCreate(bundle);
@@ -37,11 +38,13 @@ namespace CrossPlatformInVS.Droid
       contentScrollView = FindViewById<ScrollView>(Resource.Id.scrollview_content);
       
       webView.Visibility = ViewStates.Gone;
-      FindViewById<Button>(Resource.Id.button_read_full).Click += (sender, args) =>
+      readFullButton = FindViewById<Button>(Resource.Id.button_read_full);
+      readFullButton.Click += (sender, args) =>
       {
         webView.LoadUrl(feedItem.Link);
         webView.Visibility = ViewStates.Visible;
         contentScrollView.Visibility = ViewStates.Gone;
+        readFullButton.Visibility = ViewStates.Gone;
       };
     }
 
@@ -58,6 +61,7 @@ namespace CrossPlatformInVS.Droid
         
         webView.Visibility = ViewStates.Gone;
         contentScrollView.Visibility = ViewStates.Visible;
+        readFullButton.Visibility = ViewStates.Visible;
         return;
       }
       base.OnBackPressed();
