@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Planet Xamarin</string>
+  <string name="app_name">Planet Xamarin</string>
+  <string name="read_full">Read Full Article</string>
 </resources>

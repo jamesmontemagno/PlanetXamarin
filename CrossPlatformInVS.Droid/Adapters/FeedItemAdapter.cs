@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Android.App;
+using Android.Text;
 using Android.Views;
 using Android.Widget;
 using CrossPlatformInVS.Portable.Models;
@@ -61,7 +62,7 @@ namespace CrossPlatformInVS.Droid.Adapters
 
 		  var item = items.ElementAt(position);
 			helper.Title.Text = item.Title;
-		  helper.Description.Text = item.Description;
+		  helper.Description.TextFormatted = Html.FromHtml(item.Description);
 			return convertView;
 		}
 

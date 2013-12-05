@@ -8,7 +8,7 @@ namespace CrossPlatformInVS.Droid.PlatformSpecific
   {
     public void SendMessage(string message, string title = null)
     {
-      Toast.MakeText(Application.Context, message, ToastLength.Long);
+      Toast.MakeText(Application.Context, message, ToastLength.Long).Show();
     }
   }
 }

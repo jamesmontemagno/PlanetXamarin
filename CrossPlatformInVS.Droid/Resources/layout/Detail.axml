@@ -5,8 +5,29 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollview_content"
+        android:layout_weight="1"
+        android:padding="8dp">
+        <TextView
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textview_article" />
+    </ScrollView>
     <WebView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webview" />
+        android:layout_height="0dp"
+        android:id="@+id/webview"
+        android:layout_weight="1" />
+    <Button
+        android:text="@string/read_full"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_read_full" />
 </LinearLayout>

@@ -1,6 +1,8 @@
 using Android.App;
 using Android.Content;
+using Android.Net;
 using Android.OS;
+using Android.Text;
 using Android.Views;
 using Android.Webkit;
 using Android.Widget;
@@ -13,6 +15,8 @@ namespace CrossPlatformInVS.Droid
   {
     private WebView webView;
     private RSSFeedItem feedItem;
+    private TextView articleTextView;
+    private ScrollView contentScrollView;
     protected override void OnCreate(Bundle bundle)
     {
       base.OnCreate(bundle);
@@ -23,16 +27,37 @@ namespace CrossPlatformInVS.Droid
       var id = Intent.GetIntExtra("id", 0);
       feedItem = MasterActivity.ViewModel.GetFeedItem(id);
       webView.LoadData(feedItem.Description, "text/html", "charset=UTF-8");
+      webView.Settings.JavaScriptEnabled = true;
 
       ActionBar.Title = feedItem.Title;
+
+      articleTextView =FindViewById<TextView>(Resource.Id.textview_article);
+      articleTextView.TextFormatted = Html.FromHtml(feedItem.Description);
+
+      contentScrollView = FindViewById<ScrollView>(Resource.Id.scrollview_content);
+      
+      webView.Visibility = ViewStates.Gone;
+      FindViewById<Button>(Resource.Id.button_read_full).Click += (sender, args) =>
+      {
+        webView.LoadUrl(feedItem.Link);
+        webView.Visibility = ViewStates.Visible;
+        contentScrollView.Visibility = ViewStates.Gone;
+      };
     }
 
 
     public override void OnBackPressed()
     {
-      if (webView.CanGoBack())
+      if (webView.Visibility == ViewStates.Visible)
       {
-        webView.GoBack();
+        if (webView.CanGoBack())
+        {
+          webView.GoBack();
+          return;
+        }
+        
+        webView.Visibility = ViewStates.Gone;
+        contentScrollView.Visibility = ViewStates.Visible;
         return;
       }
       base.OnBackPressed();
