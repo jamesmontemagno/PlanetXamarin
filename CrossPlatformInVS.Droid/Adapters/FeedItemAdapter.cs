@@ -62,7 +62,7 @@ namespace CrossPlatformInVS.Droid.Adapters
 
 		  var item = items.ElementAt(position);
 			helper.Title.Text = item.Title;
-		  helper.Description.TextFormatted = Html.FromHtml(item.Description);
+		  helper.Description.Text = item.Caption;
 			return convertView;
 		}
 

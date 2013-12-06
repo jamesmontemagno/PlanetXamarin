@@ -14,6 +14,7 @@ namespace CrossPlatformInVS.Portable.ViewModels
 {
   public class MasterViewModel : ViewModelBase
   {
+
     private ObservableCollection<RSSFeedItem> feedItems = new ObservableCollection<RSSFeedItem>();
 
     /// <summary>

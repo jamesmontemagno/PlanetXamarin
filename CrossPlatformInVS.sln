@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.Portable", "CrossPlatformInVS.Portable\CrossPlatformInVS.Portable.csproj", "{F828D185-9051-4469-A42A-0C551074FD19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.Droid", "CrossPlatformInVS.Droid\CrossPlatformInVS.Droid.csproj", "{5377239E-9D55-4879-8BE7-96CA7C7A3C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.Touch", "CrossPlatformInVS.Touch\CrossPlatformInVS.Touch.csproj", "{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.iOS", "CrossPlatformInVS.Touch\CrossPlatformInVS.iOS.csproj", "{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.Phone", "CrossPlatformInVS.Phone\CrossPlatformInVS.Phone.csproj", "{7FB441C1-B1A9-4694-B507-49A36685D560}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.WinPhone", "CrossPlatformInVS.Phone\CrossPlatformInVS.WinPhone.csproj", "{7FB441C1-B1A9-4694-B507-49A36685D560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.Store", "CrossPlatformInVS.Store\CrossPlatformInVS.Store.csproj", "{FEAAF6D2-BC24-4BA2-8F30-0CE726F1F82E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatformInVS.WinStore", "CrossPlatformInVS.Store\CrossPlatformInVS.WinStore.csproj", "{FEAAF6D2-BC24-4BA2-8F30-0CE726F1F82E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

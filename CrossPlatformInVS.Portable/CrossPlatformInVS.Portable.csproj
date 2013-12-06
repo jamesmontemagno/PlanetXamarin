@@ -36,7 +36,6 @@
     <Compile Include="Helpers\CrossPlatformMessage.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Interfaces\IMessage.cs" />
-    <Compile Include="Interfaces\ISettings.cs" />
     <Compile Include="Models\RSSFeedItem.cs" />
     <Compile Include="ViewModels\MasterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
