@@ -8,7 +8,7 @@ using Microsoft.Phone.Shell;
 
 namespace CrossPlatformInVS.Phone
 {
-  public partial class MainPage : PhoneApplicationPage
+  public partial class MasterPage : PhoneApplicationPage
   {
     private static MasterViewModel viewModel;
 
@@ -17,7 +17,7 @@ namespace CrossPlatformInVS.Phone
       get { return viewModel ?? (viewModel = new MasterViewModel()); }
     }
     // Constructor
-    public MainPage()
+    public MasterPage()
     {
       InitializeComponent();
       this.Loaded += OnLoaded;

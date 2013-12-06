@@ -1,4 +1,6 @@
-﻿using CrossPlatformInVS.Portable.ViewModels;
+﻿using Windows.System;
+using CrossPlatformInVS.Portable.Models;
+using CrossPlatformInVS.Portable.ViewModels;
 using CrossPlatformInVS.Store.Common;
 using System;
 using System.Collections.Generic;
@@ -16,8 +18,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 // The Split Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234234
+using CrossPlatformInVS.Stroe.PlatformSpecific;
 
 namespace CrossPlatformInVS.Store
 {
@@ -59,7 +61,6 @@ namespace CrossPlatformInVS.Store
       // Setup the logical page navigation components that allow
       // the page to only show one pane at a time.
       this.navigationHelper.GoBackCommand = new CrossPlatformInVS.Store.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
-      this.itemListView.SelectionChanged += itemListView_SelectionChanged;
 
       // Start listening for Window size changes 
       // to change from showing two panes to showing a single pane
@@ -67,13 +68,6 @@ namespace CrossPlatformInVS.Store
       this.InvalidateVisualState();
     }
 
-    void itemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-      if (this.UsingLogicalPageNavigation())
-      {
-        this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
-      }
-    }
 
     /// <summary>
     /// Populates the page with content passed during navigation.  Any saved state is also
@@ -174,7 +168,19 @@ namespace CrossPlatformInVS.Store
       // an item is selected this has the effect of changing from displaying the item list
       // to showing the selected item's details.  When the selection is cleared this has the
       // opposite effect.
-      if (this.UsingLogicalPageNavigation()) this.InvalidateVisualState();
+      if (this.UsingLogicalPageNavigation()) 
+        this.InvalidateVisualState();
+
+      if (this.UsingLogicalPageNavigation())
+      {
+        this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
+      }
+
+      if (itemListView.SelectedItem != null)
+      {
+        DefaultViewModel.SelectedFeedItem = (RSSFeedItem) itemListView.SelectedItem;
+        this.Browser.NavigateToString(WebBrowserHelper.WrapHtml(DefaultViewModel.SelectedFeedItem.Description, Browser.Width));
+      }
     }
 
     private bool CanGoBack()
@@ -253,5 +259,13 @@ namespace CrossPlatformInVS.Store
     }
 
     #endregion
+
+    private void ViewArticleButton_OnClick(object sender, RoutedEventArgs e)
+    {
+      if (DefaultViewModel.SelectedFeedItem == null)
+        return;
+
+      Launcher.LaunchUriAsync(new Uri(DefaultViewModel.SelectedFeedItem.Link, UriKind.Absolute));
+    }
   }
 }

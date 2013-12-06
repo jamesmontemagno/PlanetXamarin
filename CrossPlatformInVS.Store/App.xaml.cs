@@ -69,7 +69,7 @@ namespace CrossPlatformInVS.Store
                     throw new Exception("Failed to create initial page");
                 }
             }
-            Portable.Helpers.CrossPlatfromSettings.Instance = new WindowsStoreSettings();
+            Portable.Helpers.CrossPlatformMessage.Instance = new Message();
 
             // Ensure the current window is active
             Window.Current.Activate();

@@ -6,14 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
-    xmlns:PlatformSpecific="clr-namespace:CrossPlatformInVS.Phone.PlatformSpecific"
-    x:Class="CrossPlatformInVS.Phone.MainPage"
+    xmlns:platformSpecific="clr-namespace:CrossPlatformInVS.Phone.PlatformSpecific"
+    x:Class="CrossPlatformInVS.Phone.MasterPage"
     mc:Ignorable="d"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True"
     toolkit:TiltEffect.IsTiltEnabled="True">
     <phone:PhoneApplicationPage.Resources>
-        <PlatformSpecific:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <platformSpecific:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <DataTemplate x:Key="FeedItemTemplate">
             <StackPanel Margin="0,10,-1,10">
                 <TextBlock Text="{Binding Title}" TextWrapping="NoWrap" Style="{StaticResource PhoneTextLargeStyle}"/>

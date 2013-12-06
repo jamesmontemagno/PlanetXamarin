@@ -46,7 +46,7 @@ namespace CrossPlatformInVS.Phone
         {
           var id = 0;
           int.TryParse(idString, out id);
-          item = MainPage.ViewModel.GetFeedItem(id);
+          item = MasterPage.ViewModel.GetFeedItem(id);
           DataContext = item;
           var fullHtml = WebBrowserHelper.WrapHtml(item.Description, Browser.ActualWidth);
           Browser.NavigateToString(fullHtml);
