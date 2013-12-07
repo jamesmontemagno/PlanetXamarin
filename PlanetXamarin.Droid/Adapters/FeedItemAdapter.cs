@@ -3,7 +3,6 @@ using System.Linq;
 using Android.App;
 using Android.Views;
 using Android.Widget;
-using CrossPlatformInVS.Droid;
 using PlanetXamarin.Droid.PlatformSpecific;
 using PlanetXamarin.Portable.Models;
 

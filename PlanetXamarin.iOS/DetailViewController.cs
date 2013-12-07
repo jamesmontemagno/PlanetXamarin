@@ -21,6 +21,7 @@ namespace PlantXamarin.iOS
      
       Root = new RootElement(item.Title) {
                 new Section{
+                new StringElement(item.Author),
                 new StringElement(item.PublishDate),
 				        new StyledMultilineElement(htmlString),
                 new HtmlElement("Full Article", item.Link)

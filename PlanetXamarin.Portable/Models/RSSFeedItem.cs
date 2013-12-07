@@ -27,7 +27,7 @@ namespace PlanetXamarin.Portable.Models
         var splitIndex = title.IndexOf(":", StringComparison.OrdinalIgnoreCase);
         if (splitIndex > -1)
         {
-          Author = title.Substring(0, splitIndex - 1).Trim();
+          Author = title.Substring(0, splitIndex).Trim();
           title = title.Substring(splitIndex + 1, title.Length - splitIndex - 1).Trim();
         }
       }
