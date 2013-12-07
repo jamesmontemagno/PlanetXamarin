@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list" 
+        android:drawSelectorOnTop="true"
+        android:padding="8dip"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dip"
+        android:clipToPadding="true"
+        android:clipChildren="true"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent" />
+</LinearLayout>

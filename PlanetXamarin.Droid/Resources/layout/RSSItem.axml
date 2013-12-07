@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_card">
+    <ImageView android:id="@+id/image"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="7"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:padding="8dp">
+        <TextView
+            android:text="Title Here"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:maxLines="2" />
+        <TextView
+            android:text="Description here but will be 2 lines long"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:lines="2" />
+    </LinearLayout>
+</LinearLayout>
