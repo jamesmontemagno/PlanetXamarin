@@ -17,9 +17,10 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding Image}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50"></Image>
+                <Image Source="{Binding Image}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="50" Visibility="{Binding ShowImage, Converter={StaticResource BooleanToVisibilityConverter}}"></Image>
                 <StackPanel Grid.Column="1" Margin="10,-10,0,0">
                     <TextBlock Text="{Binding Title}" Style="{StaticResource BodyTextStyle}" TextWrapping="NoWrap"/>
+                    <TextBlock Text="{Binding Author}" Foreground="#FF6495ED" Style="{StaticResource BodyTextStyle}" TextWrapping="NoWrap"/>
                     <TextBlock Text="{Binding Caption}" Style="{StaticResource BodyTextStyle}" MaxLines="2" Foreground="{StaticResource ApplicationSecondaryForegroundThemeBrush}" TextWrapping="Wrap"/>
                 </StackPanel>
             </Grid>

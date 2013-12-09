@@ -24,7 +24,8 @@ namespace PlanetXamarin.Droid.Adapters
 		private class FeedItemAdapterHelper : Java.Lang.Object
 		{
 			public TextView Title { get; set; }
-      public TextView Description { get; set; }
+      public TextView Author { get; set; }
+      public TextView Caption { get; set; }
       public ImageView Image { get; set; }
 		}
 
@@ -54,11 +55,12 @@ namespace PlanetXamarin.Droid.Adapters
 			if (convertView == null) {
 				convertView = activity.LayoutInflater.Inflate (Resource.Layout.RSSItem, null);
 				helper = new FeedItemAdapterHelper ();
-        helper.Title = convertView.FindViewById<TextView>(Resource.Id.textView1);
-        helper.Description = convertView.FindViewById<TextView>(Resource.Id.textView2);
+        helper.Title = convertView.FindViewById<TextView>(Resource.Id.text_title);
+        helper.Author = convertView.FindViewById<TextView>(Resource.Id.text_author);
+        helper.Caption = convertView.FindViewById<TextView>(Resource.Id.text_caption);
         helper.Image = convertView.FindViewById<ImageView>(Resource.Id.image);
         helper.Title.SetMaxLines(2);
-        helper.Description.SetMaxLines(2);
+        helper.Caption.SetMaxLines(2);
         convertView.Tag = helper;
 			} else {
 				helper = convertView.Tag as FeedItemAdapterHelper;
@@ -66,8 +68,11 @@ namespace PlanetXamarin.Droid.Adapters
 
 		  var item = items.ElementAt(position);
 			helper.Title.Text = item.Title;
-		  helper.Description.Text = item.Caption;
-      imageLoader.DisplayImage(item.Image, helper.Image, Resource.Drawable.default_person);
+		  helper.Caption.Text = item.Caption;
+      helper.Author.Text = item.Author;
+      helper.Image.Visibility = item.ShowImage ? ViewStates.Visible : ViewStates.Gone;
+      if(item.ShowImage)
+        imageLoader.DisplayImage(item.Image, helper.Image, Resource.Drawable.default_person);
 			return convertView;
 		}
 

@@ -5,15 +5,17 @@ namespace PlanetXamarin.Portable.Models
 {
   public class RSSFeedItem
   {
-    private string title;
 
-    
+
+
     public string Description { get; set; }
     public string Link { get; set; }
     public string PublishDate { get; set; }
     public string Author { get; set; }
     public string AuthorEmail { get; set; }
     public int Id { get; set; }
+
+    private string title;
     public string Title
     {
       get
@@ -52,17 +54,29 @@ namespace PlanetXamarin.Portable.Models
       }
     }
 
+    private bool showImage = false;
+
+    public bool ShowImage
+    {
+      get { return showImage; }
+      set { showImage = value; }
+    }
+
     private string image = @"https://secure.gravatar.com/avatar/70148d964bb389d42547834e1062c886?s=60&r=x&d=http%3a%2f%2fd1iqk4d73cu9hh.cloudfront.net%2fcomponents%2fimg%2fuser-icon.png";
 
+    /// <summary>
+    /// When we set the image, mark show image as true
+    /// </summary>
     public string Image
     {
       get { return image; }
-       set
+      set
       {
         image = value;
+        showImage = true;
       }
-      
+
     }
-    
+
   }
 }

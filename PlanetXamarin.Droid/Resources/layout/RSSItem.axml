@@ -22,14 +22,22 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView1"
-            android:maxLines="2" />
+            android:id="@+id/text_title"
+            android:singleLine="true" />
+      <TextView
+            android:text="Title Here"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent"
+            android:id="@+id/text_author"
+            android:singleLine="true" />
         <TextView
             android:text="Description here but will be 2 lines long"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/text_caption"
             android:lines="2" />
     </LinearLayout>
 </LinearLayout>

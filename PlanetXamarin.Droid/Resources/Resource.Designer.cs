@@ -117,6 +117,9 @@ namespace PlanetXamarin.Droid
 		public partial class Color
 		{
 			
+			// aapt resource value: 0x7f050001
+			public const int accent = 2131034113;
+			
 			// aapt resource value: 0x7f050000
 			public const int background = 2131034112;
 			
@@ -185,14 +188,17 @@ namespace PlanetXamarin.Droid
 			// aapt resource value: 0x7f070005
 			public const int loadingProgressWheel = 2131165189;
 			
-			// aapt resource value: 0x7f070008
-			public const int textView1 = 2131165192;
-			
-			// aapt resource value: 0x7f070009
-			public const int textView2 = 2131165193;
-			
 			// aapt resource value: 0x7f070003
 			public const int textViewStatus = 2131165187;
+			
+			// aapt resource value: 0x7f070009
+			public const int text_author = 2131165193;
+			
+			// aapt resource value: 0x7f07000a
+			public const int text_caption = 2131165194;
+			
+			// aapt resource value: 0x7f070008
+			public const int text_title = 2131165192;
 			
 			// aapt resource value: 0x7f070000
 			public const int webview = 2131165184;

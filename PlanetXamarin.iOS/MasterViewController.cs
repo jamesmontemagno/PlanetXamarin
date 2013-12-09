@@ -54,10 +54,13 @@ namespace PlantXamarin.iOS
       var cell = new UITableViewCell(UITableViewCellStyle.Subtitle, "rssitem");
       cell.TextLabel.Text = item.Title;
       cell.DetailTextLabel.Text = item.Caption;
-      cell.ImageView.SetImage(
-        url: new NSUrl(item.Image),
-        placeholder: UIImage.FromBundle("default_person.png")
-      );
+      if (item.ShowImage)
+      {
+        cell.ImageView.SetImage(
+          url: new NSUrl(item.Image),
+          placeholder: UIImage.FromBundle("default_person.png")
+          );
+      }
       return cell;
     }
 
