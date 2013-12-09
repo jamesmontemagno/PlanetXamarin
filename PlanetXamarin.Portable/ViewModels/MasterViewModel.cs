@@ -62,7 +62,6 @@ namespace PlanetXamarin.Portable.ViewModels
       var items = await ParseFeed(responseString);
       foreach (var item in items)
       {
-        item.Image = Gravatar.GetUrl(item.Author);
         FeedItems.Add(item);
       }
 
