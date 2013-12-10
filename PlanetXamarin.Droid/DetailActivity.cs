@@ -54,6 +54,12 @@ namespace PlanetXamarin.Droid
       base.OnBackPressed();
     }
 
+    protected override void OnResume()
+    {
+      base.OnResume();
+      readFullButton.Visibility = ViewStates.Visible;
+    }
+
     ShareActionProvider actionProvider;
     public override bool OnCreateOptionsMenu(IMenu menu)
     {
