@@ -7,36 +7,17 @@
   <Blogger Name="Jonathan Pryor" RssUrl="http://www.jprl.com/Blog/jon.rss2" Email="jonp@xamarin.com" Twitter="jonpryor" />
   <Blogger Name="Rolf Bjarne Kvinge" RssUrl="http://rolfkvinge.blogspot.com/feeds/posts/default?alt=rss" Email="rolf@xamarin.com"/>
   <Blogger Name="Jeffrey Stedfast" RssUrl="http://jeffreystedfast.blogspot.com/feeds/posts/default?alt=rss" Email="jeff@xamarin.com" Twitter="jstedfast"/>
-  <Blogger Name="Stephane Delcroix" RssUrl="http://blog.reblochon.org/feeds/posts/default?alt=rss" Email="stephane@delcroix.org" Twitter="s_delcroix"  />
   <Blogger Name="Mike Krüger" RssUrl="http://mikemdblog.blogspot.com/feeds/posts/default?alt=rss" Email="mkrueger@xamarin.com" Twitter="mikrueger‎" />
   <Blogger Name="Craig Dunn" RssUrl="http://conceptdev.blogspot.com/feeds/posts/default?alt=rss" Email="craig.dunn@xamarin.com" Twitter="conceptdev"  />
-  <Blogger Name="Brent Schooley" RssUrl="http://www.codesnack.com/blog/atom.xml?categoryId=1677945" Email="schooleybrent@gmail.com" Twitter="brentschooley" />
   <Blogger Name="Chris Hardy" RssUrl="http://chrisntr.github.io/atom.xml" Email="chrisntr@xamarin.com" Twitter="ChrisNTR"/>
   <Blogger Name="Xamarin Podcast" RssUrl="http://feeds.soundcloud.com/users/soundcloud:users:55118534/sounds.rss" Email="xamarinpodcast@gmail.com"/>
   <Blogger Name="Miguel de Icaza" RssUrl="http://feeds.feedburner.com/MiguelsOsxAndIosBlog" Email="miguel@xamarin.com" Twitter="migueldeicaza" />
-  <Blogger Name="Kenneth Pouncey" RssUrl="http://cocoa-mono.org/?feed=rss2" Email="kjpou@pt.lu"/>
   <Blogger Name="Eric Maupin" RssUrl="http://ermau.com/feed/" Email="eric.maupin@xamarin.com" Twitter="ermau" />
   <Blogger Name="Jérémie Laval" RssUrl="http://blog.neteril.org/atom.xml" Email="jeremie.laval@xamarin.com" Twitter="jeremie_laval" />
   <Blogger Name="Mike Bluestein" RssUrl="http://mikebluestein.wordpress.com/feed/" Email="mike.bluestein@xamarin.com" Twitter="mikebluestein"/>
-  <Blogger Name="Frank Krueger" RssUrl="http://praeclarum.org/rss" Email="fak@kruegersystems.com" Twitter="praeclarum"/>
-  <Blogger Name="Michael James" RssUrl="http://micjames.co.uk/feed/" Email="michael.james@xamarin.com" Twitter="micjames6"/>
-  <Blogger Name="Paul Betts" RssUrl="http://log.paulbetts.org/rss/" Email="paul@github.com" Twitter="xpaulbettsx"/>
-  <Blogger Name="Jonathan Dick" RssUrl="http://redth.info/atom.xml" Email="jondick@gmail.com" Twitter="Redth"/>
-  <Blogger Name="Brett Duncavage" RssUrl="http://brett.duncavage.org/feeds/posts/default?alt=rss" Email="brett.duncavage@rd.io" Twitter="xforward"/>
   <Blogger Name="Wallace B. (Wally) McClure" RssUrl="http://weblogs.asp.net/wallym/rss.aspx" Email="wallym@scalabledevelopment.com" Twitter="wbm"/>
-  <Blogger Name="David Ortinau" RssUrl="http://www.davidortinau.com/blog/atom/" Email="dave@davidortinau.com" Twitter="davidortinau"/>
-  <Blogger Name="Jon Peppers" RssUrl="http://www.hitcents.com/blog/posts/jon-peppers/feed" Email="jonathan.peppers@hitcents.com" Twitter="jonathanpeppers"/>
-  <Blogger Name="Greg Shackles" RssUrl="http://www.gregshackles.com/feed/" Email="gshackles@gmail.com" Twitter="gshackles"/>
-  <Blogger Name="Stephen Shaw" RssUrl="http://feeds.feedburner.com/decriptor/qXWe" Email="sshaw@decriptor.com" Twitter="decriptor"/>
-  <Blogger Name="Pavel Sich" RssUrl="http://iosbits.co.uk/new/?feed=rss2" Email="pavel.sich@me.com" Twitter="sichy"/>
-  <Blogger Name="Nic Wise" RssUrl="http://www.fastchicken.co.nz/atom.xml" Email="nicw@fastchicken.co.nz" Twitter="fastchicken"/>
-  <Blogger Name="Larry O'Brien" RssUrl="http://www.knowing.net/index.php/category/xamarin/feed/" Email="lobrien@knowing.net" Twitter="lobrien"/>
-  <Blogger Name="Ryan Paul" RssUrl="http://blog.phault.net/feed/" Email="seg@phault.net" Twitter="segphault"/>
   <Blogger Name="Nishanth Anil" RssUrl="http://nnish.com/feed/" Email="nish@xamarin.com" Twitter="nishanil"/>
-  <Blogger Name="Dimitris Tavlikos" RssUrl="http://software.tavlikos.com/feed/" Email="jimitav@gmail.com" Twitter="dtavlikos"/>
-  <Blogger Name="Prashant Cholachagudd" RssUrl="http://prashantvc.com/feed/" Email="prashant.cholachagudd@xamarin.com" Twitter="prshntvc"/>
   <Blogger Name="Xamarin" RssUrl="http://blog.xamarin.com/feed/" Email="hello@xamarin.com" Twitter="xamarinhq" />
-  <Blogger Name="Gone Mobile" RssUrl="http://gonemobile.io/atom.xml" Email="gonemobilecast@gmail.com" Twitter="gonemobilecast" />
   <Blogger Name="David Siegel" RssUrl="http://dvdsgl.co/tagged/xamarin/rss" Email="david@xamarin.com" Twitter="dvdsgl" />
   <Blogger Name="James Montemagno" RssUrl="http://motzcod.es/rss" Email="james.montemagno@xamarin.com" Twitter="jamesmontemagno"/>
 </BloggerCollection>

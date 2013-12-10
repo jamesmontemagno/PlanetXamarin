@@ -54,7 +54,7 @@ namespace PlanetXamarin.Portable.Models
       }
     }
 
-    private bool showImage = false;
+    private bool showImage = true;
 
     public bool ShowImage
     {

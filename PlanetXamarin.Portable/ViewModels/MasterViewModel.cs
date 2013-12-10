@@ -56,7 +56,8 @@ namespace PlanetXamarin.Portable.ViewModels
       IsBusy = true;
 
       var httpClient = new HttpClient();
-      var responseString = await httpClient.GetStringAsync("http://planet.xamarin.com/feed/");
+      var feed = "http://planet.xamarin.com/feed/";
+      var responseString = await httpClient.GetStringAsync(feed);
 
       FeedItems.Clear();
       var items = await ParseFeed(responseString);
