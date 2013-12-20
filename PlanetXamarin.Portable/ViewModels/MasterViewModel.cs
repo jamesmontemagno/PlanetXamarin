@@ -8,6 +8,7 @@ using System.Xml.Linq;
 using PlanetXamarin.Portable.Helpers;
 using PlanetXamarin.Portable.Helpers.PlanetX.Utilities;
 using PlanetXamarin.Portable.Models;
+using PlanetXamarin.Portable.Interfaces;
 
 namespace PlanetXamarin.Portable.ViewModels
 {
@@ -63,12 +64,19 @@ namespace PlanetXamarin.Portable.ViewModels
       var items = await ParseFeed(responseString);
       foreach (var item in items)
       {
+        if(Settings.JamesOnly && !item.Author.Contains("James"))
+        {
+          continue;
+
+        }
         item.Image = Gravatar.GetUrl(item.Author);
         FeedItems.Add(item);
       }
 
 
       IsBusy = false;
+      var message = ServiceContainer.Resolve<IMessage>();
+      message.SendMessage("SUCCESS!! HOUSTON IS AWESOME!");
     }
 
     /// <summary>

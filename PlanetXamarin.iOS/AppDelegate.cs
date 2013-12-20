@@ -1,7 +1,9 @@
 ﻿using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using PlanetXamarin.iOS.PlatformSpecific;
+using PlanetXamarin.Portable;
 using PlanetXamarin.Portable.Helpers;
-using PlantXamarin.iOS.PlatformSpecific;
+using PlanetXamarin.Portable.Interfaces;
 
 namespace PlantXamarin.iOS
 {
@@ -25,7 +27,8 @@ namespace PlantXamarin.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 
-            CrossPlatformMessage.Instance = new Message();
+            ServiceContainer.Register<IMessage>(() => new MessageiOS());
+            ServiceContainer.Register<ISettings>(() => new SettingsiOS());
             // create a new window instance based on the screen size
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 

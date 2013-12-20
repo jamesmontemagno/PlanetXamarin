@@ -6,6 +6,8 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using PlanetXamarin.Portable.Helpers;
 using PlanetXamarin.WinStore.PlatformSpecific;
+using PlanetXamarin.Portable;
+using PlanetXamarin.Portable.Interfaces;
 
 namespace PlanetXamarin.WinStore
 {
@@ -60,7 +62,8 @@ namespace PlanetXamarin.WinStore
                     throw new Exception("Failed to create initial page");
                 }
             }
-            CrossPlatformMessage.Instance = new Message();
+            ServiceContainer.Register<IMessage>(() => new MessageWinStore());
+            ServiceContainer.Register<ISettings>(() => new SettingsWinStore());
 
             // Ensure the current window is active
             Window.Current.Activate();

@@ -56,7 +56,6 @@ namespace PlanetXamarin.WinPhone
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
-            CrossPlatformMessage.Instance = new Message();
         }
 
         // Code to execute when the application is launching (eg, from Start)

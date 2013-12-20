@@ -4,6 +4,8 @@ using Android.OS;
 using Android.Views;
 using Android.Webkit;
 using Android.Widget;
+using PlanetXamarin.Portable;
+using PlanetXamarin.Portable.Interfaces;
 using PlanetXamarin.Portable.Models;
 
 namespace PlanetXamarin.Droid
@@ -25,6 +27,8 @@ namespace PlanetXamarin.Droid
       feedItem = MasterActivity.ViewModel.GetFeedItem(id);
       webView.LoadData(feedItem.Description, "text/html", "charset=UTF-8");
       webView.Settings.JavaScriptEnabled = true;
+
+      PlanetXamarin.Portable.Helpers.Settings.JamesOnly = false;
 
       ActionBar.Title = feedItem.Title;
 

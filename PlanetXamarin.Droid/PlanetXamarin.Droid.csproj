@@ -59,10 +59,12 @@
     <Compile Include="Adapters\FeedItemAdapter.cs" />
     <Compile Include="DetailActivity.cs" />
     <Compile Include="MasterActivity.cs" />
+    <Compile Include="PlanetXamarinApp.cs" />
     <Compile Include="PlatformSpecific\FileCache.cs" />
     <Compile Include="PlatformSpecific\ImageLoader.cs" />
     <Compile Include="PlatformSpecific\MemoryCache.cs" />
-    <Compile Include="PlatformSpecific\Message.cs" />
+    <Compile Include="PlatformSpecific\MessageDroid.cs" />
+    <Compile Include="PlatformSpecific\SettingsDroid.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,10 +74,6 @@
     <AndroidResource Include="Resources\layout\Detail.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-hdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-mdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Thumbs.db" />
     <AndroidResource Include="Resources\layout\RSSItem.axml" />
   </ItemGroup>
   <ItemGroup>

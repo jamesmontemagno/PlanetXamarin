@@ -7,7 +7,7 @@ using AndroidHUD;
 using PlanetXamarin.Droid.Adapters;
 using PlanetXamarin.Portable.Helpers;
 using PlanetXamarin.Portable.ViewModels;
-using Message = PlanetXamarin.Droid.PlatformSpecific.Message;
+using Message = PlanetXamarin.Droid.PlatformSpecific.MessageDroid;
 
 namespace PlanetXamarin.Droid
 {
@@ -22,7 +22,7 @@ namespace PlanetXamarin.Droid
 
     protected async override void OnCreate(Bundle bundle)
     {
-      CrossPlatformMessage.Instance = new Message();
+      
       base.OnCreate(bundle);
 
       // Set our view from the "main" layout resource

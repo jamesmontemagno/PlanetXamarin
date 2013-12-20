@@ -92,7 +92,8 @@
     <None Include="app.config" />
     <None Include="Info.plist" />
     <Compile Include="MasterViewController.cs" />
-    <Compile Include="PlatformSpecific\Message.cs" />
+    <Compile Include="PlatformSpecific\MessageiOS.cs" />
+    <Compile Include="PlatformSpecific\SettingsiOS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
