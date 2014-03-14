@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BloggerCollection>
+  <Blogger Name="Sebastien Pouliot" RssUrl="http://spouliot.wordpress.com/category/mono/feed/" Email="sebastien@xamarin.com" Twitter="spouliot‎"/>
+  <Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/feed/" Email="joseph@xamarin.com" Twitter="josephhill" />
+  <Blogger Name="Aaron Bockover" RssUrl="http://abock.org/feed" Email="abock@xamarin.com" Twitter="abock"/>
+  <Blogger Name="Michael Hutchinson" RssUrl="http://mjhutchinson.com/mono-feed" Email="mhutch@xamarin.com" Twitter="mjhutchinson"/>
+  <Blogger Name="Jonathan Pryor" RssUrl="http://www.jprl.com/Blog/jon.rss2" Email="jonp@xamarin.com" Twitter="jonpryor" />
+  <Blogger Name="Rolf Bjarne Kvinge" RssUrl="http://rolfkvinge.blogspot.com/feeds/posts/default?alt=rss" Email="rolf@xamarin.com"/>
+  <Blogger Name="Jeffrey Stedfast" RssUrl="http://jeffreystedfast.blogspot.com/feeds/posts/default?alt=rss" Email="jeff@xamarin.com" Twitter="jstedfast"/>
+  <Blogger Name="Mike Krüger" RssUrl="http://mikemdblog.blogspot.com/feeds/posts/default?alt=rss" Email="mkrueger@xamarin.com" Twitter="mikrueger‎" />
+  <Blogger Name="Craig Dunn" RssUrl="http://conceptdev.blogspot.com/feeds/posts/default?alt=rss" Email="craig.dunn@xamarin.com" Twitter="conceptdev"  />
+  <Blogger Name="Chris Hardy" RssUrl="http://chrisntr.github.io/atom.xml" Email="chrisntr@xamarin.com" Twitter="ChrisNTR"/>
+  <Blogger Name="Xamarin Podcast" RssUrl="http://feeds.soundcloud.com/users/soundcloud:users:55118534/sounds.rss" Email="xamarinpodcast@gmail.com"/>
+  <Blogger Name="Miguel de Icaza" RssUrl="http://feeds.feedburner.com/MiguelsOsxAndIosBlog" Email="miguel@xamarin.com" Twitter="migueldeicaza" />
+  <Blogger Name="Eric Maupin" RssUrl="http://ermau.com/feed/" Email="eric.maupin@xamarin.com" Twitter="ermau" />
+  <Blogger Name="Jérémie Laval" RssUrl="http://blog.neteril.org/atom.xml" Email="jeremie.laval@xamarin.com" Twitter="jeremie_laval" />
+  <Blogger Name="Mike Bluestein" RssUrl="http://mikebluestein.wordpress.com/feed/" Email="mike.bluestein@xamarin.com" Twitter="mikebluestein"/>
+  <Blogger Name="Wallace B. (Wally) McClure" RssUrl="http://weblogs.asp.net/wallym/rss.aspx" Email="wallym@scalabledevelopment.com" Twitter="wbm"/>
+  <Blogger Name="Nishanth Anil" RssUrl="http://nnish.com/feed/" Email="nish@xamarin.com" Twitter="nishanil"/>
+  <Blogger Name="Xamarin" RssUrl="http://blog.xamarin.com/feed/" Email="hello@xamarin.com" Twitter="xamarinhq" />
+  <Blogger Name="David Siegel" RssUrl="http://dvdsgl.co/tagged/xamarin/rss" Email="david@xamarin.com" Twitter="dvdsgl" />
+  <Blogger Name="James Montemagno" RssUrl="http://motzcod.es/rss" Email="james.montemagno@xamarin.com" Twitter="jamesmontemagno"/>
+</BloggerCollection>

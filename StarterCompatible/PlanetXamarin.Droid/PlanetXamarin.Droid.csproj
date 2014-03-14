@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5377239E-9D55-4879-8BE7-96CA7C7A3C39}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlanetXamarin.Droid</RootNamespace>
+    <AssemblyName>PlanetXamarin.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
+    <MandroidI18n />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;__ANDROID__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;__ANDROID__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <JavaOptions>
+    </JavaOptions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\FeedItemAdapter.cs" />
+    <Compile Include="DetailActivity.cs" />
+    <Compile Include="MasterActivity.cs" />
+    <Compile Include="PlatformSpecific\FileCache.cs" />
+    <Compile Include="PlatformSpecific\ImageLoader.cs" />
+    <Compile Include="PlatformSpecific\MemoryCache.cs" />
+    <Compile Include="PlatformSpecific\Message.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\PlanetXamarin.Portable\Helpers\CrossPlatformMessage.cs">
+      <Link>Shared\Helpers\CrossPlatformMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\Helpers\GravatarHelper.cs">
+      <Link>Shared\Helpers\GravatarHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\Helpers\MD5.cs">
+      <Link>Shared\Helpers\MD5.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\Helpers\RelayCommand.cs">
+      <Link>Shared\Helpers\RelayCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\Helpers\ResourceLoader.cs">
+      <Link>Shared\Helpers\ResourceLoader.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\Helpers\ViewModelBase.cs">
+      <Link>Shared\Helpers\ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\Interfaces\IMessage.cs">
+      <Link>Shared\Interfaces\IMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\Models\RSSFeedItem.cs">
+      <Link>Shared\Models\RSSFeedItem.cs</Link>
+    </Compile>
+    <Compile Include="..\PlanetXamarin.Portable\ViewModels\MasterViewModel.cs">
+      <Link>Shared\ViewModels\MasterViewModel.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\Detail.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\RSSItem.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Master.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable\background_card.9.png" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\default_person.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Folder Include="Shared\" />
+    <Folder Include="Shared\Helpers\" />
+    <Folder Include="Shared\Interfaces\" />
+    <Folder Include="Shared\Models\" />
+    <Folder Include="Shared\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\PlanetXamarin.Portable\Helpers\Bloggers.xml">
+      <Link>Shared\Helpers\Bloggers.xml</Link>
+      <LogicalName>Bloggers.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
