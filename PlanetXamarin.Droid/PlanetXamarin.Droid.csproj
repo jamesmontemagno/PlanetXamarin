@@ -72,10 +72,6 @@
     <AndroidResource Include="Resources\layout\Detail.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-hdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-mdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Thumbs.db" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Thumbs.db" />
     <AndroidResource Include="Resources\layout\RSSItem.axml" />
   </ItemGroup>
   <ItemGroup>
