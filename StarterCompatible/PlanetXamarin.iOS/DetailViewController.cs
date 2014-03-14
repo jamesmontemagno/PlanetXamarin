@@ -27,6 +27,15 @@ namespace PlantXamarin.iOS
                 new HtmlElement("Full Article", item.Link)
               }
 			};
+
+			NavigationItem.RightBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Action, async delegate
+				{
+					var message = item.Title + " " + item.Link + " #PlanetXamarin";
+					var social = new UIActivityViewController(new NSObject[] { new NSString(message)}, 
+						new UIActivity[] { new UIActivity() });
+					PresentViewController(social, true, null);
+				});
+
     }
 
 

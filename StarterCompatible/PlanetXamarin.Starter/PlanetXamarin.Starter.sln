@@ -51,6 +51,6 @@ Global
 		{5377239E-9D55-4879-8BE7-96CA7C7A3C39}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ..\PlanetXamarin.Droid\PlanetXamarin.Droid.csproj
+		StartupItem = ..\PlanetXamarin.iOS\PlanetXamarin.iOS.csproj
 	EndGlobalSection
 EndGlobal

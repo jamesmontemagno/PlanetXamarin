@@ -1,20 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../PlanetXamarin.Portable/Helpers/GravatarHelper.cs">
-    <Files>
-      <File FileName="../PlanetXamarin.Droid/DetailActivity.cs" Line="1" Column="1" />
-      <File FileName="../PlanetXamarin.Portable/ViewModels/MasterViewModel.cs" Line="78" Column="18" />
-      <File FileName="../PlanetXamarin.iOS/PlatformSpecific/Message.cs" Line="1" Column="1" />
-      <File FileName="../PlanetXamarin.iOS/PlatformSpecific/LoadingOverlay.cs" Line="28" Column="38" />
-      <File FileName="../PlanetXamarin.iOS/MasterViewController.cs" Line="60" Column="43" />
-      <File FileName="../PlanetXamarin.Portable/Helpers/GravatarHelper.cs" Line="44" Column="17" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/jamesmontemagno/Documents/GitHub/PlanetXamarin/StarterCompatible/PlanetXamarin.Droid/MasterActivity.cs" line="35" column="1" />
-      <Breakpoint file="/Users/jamesmontemagno/Documents/GitHub/PlanetXamarin/StarterCompatible/PlanetXamarin.Portable/ViewModels/MasterViewModel.cs" line="71" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.PlanetXamarin.Droid AndroidDeviceId-Debug="emulator-5554" />

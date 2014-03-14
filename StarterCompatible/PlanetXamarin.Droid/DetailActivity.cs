@@ -77,7 +77,7 @@ namespace PlanetXamarin.Droid
     {
       var intent = new Intent(Intent.ActionSend);
       intent.SetType("text/plain");
-      intent.PutExtra(Intent.ExtraText, feedItem.Title + " " + feedItem.Link);
+			intent.PutExtra(Intent.ExtraText, feedItem.Title + " " + feedItem.Link + " #PlanetXamarin");
       return intent;
     }
 
