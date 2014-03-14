@@ -8,7 +8,8 @@ Features:
 * XDocument parse in background
 * Download and cache web images (caching on only android right now)
 * Shows loading spinners on each platform
-* Shows of social sharing native on each platfor
+* Shows of social sharing native on each platform
+* Gravatar loading!
 
 Blog Post:
 http://blog.xamarin.com/webinar-recording-native-app-development/
