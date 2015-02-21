@@ -1,7 +1,9 @@
-using System.Drawing;
+using System;
+using System;
+using CoreGraphics;
 using MonoTouch.Dialog;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using UIKit;
 using PlanetXamarin.Portable.Models;
 
 namespace PlantXamarin.iOS
@@ -27,6 +29,14 @@ namespace PlantXamarin.iOS
                 new HtmlElement("Full Article", item.Link)
               }
 			};
+
+      NavigationItem.RightBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Action, async delegate
+      {
+        var message = item.Title + " " + item.Link + " #PlanetXamarin";
+        var social = new UIActivityViewController(new NSObject[] { new NSString(message) },
+          new UIActivity[] { new UIActivity() });
+        PresentViewController(social, true, null);
+      });
     }
 
 
@@ -40,11 +50,11 @@ namespace PlantXamarin.iOS
       }
       public NSAttributedString AttributedText { get; set; }
 
-      public virtual float GetHeight(UITableView tableView, NSIndexPath indexPath)
+      public virtual nfloat GetHeight(UITableView tableView, NSIndexPath indexPath)
       {
 
-          var sizeAttr = this.AttributedText.GetBoundingRect(new SizeF(UIApplication.SharedApplication.KeyWindow.Frame.Width, int.MaxValue), NSStringDrawingOptions.UsesLineFragmentOrigin, new NSStringDrawingContext());
-          return sizeAttr.Height;
+          var sizeAttr = (CGRect)this.AttributedText.GetBoundingRect((CGSize)new CGSize(UIApplication.SharedApplication.KeyWindow.Frame.Width, int.MaxValue), (NSStringDrawingOptions)NSStringDrawingOptions.UsesLineFragmentOrigin, (NSStringDrawingContext)new NSStringDrawingContext());
+          return (nfloat)sizeAttr.Height;
 
       }
 

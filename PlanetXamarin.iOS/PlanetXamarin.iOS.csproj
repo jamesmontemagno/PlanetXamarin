@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>PlantXamarin.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -21,17 +21,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchDebug>True</MtouchDebug>
-    <MtouchSdkVersion>7.0</MtouchSdkVersion>
+    <MtouchSdkVersion>8.1</MtouchSdkVersion>
     <MtouchProfiling>False</MtouchProfiling>
     <MtouchExtraArgs />
     <MtouchFastDev>False</MtouchFastDev>
     <MtouchEnableGenericValueTypeSharing>True</MtouchEnableGenericValueTypeSharing>
-    <MtouchArch>Default, ARMv7</MtouchArch>
+    <MtouchArch>i386</MtouchArch>
     <MtouchUseLlvm>False</MtouchUseLlvm>
     <MtouchUseThumb>False</MtouchUseThumb>
-    <MtouchUseSGen>False</MtouchUseSGen>
+    <MtouchUseSGen>True</MtouchUseSGen>
     <MtouchUseRefCounting>False</MtouchUseRefCounting>
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
     <MtouchI18n />
@@ -92,8 +92,14 @@
     <None Include="app.config" />
     <None Include="Info.plist" />
     <Compile Include="MasterViewController.cs" />
+    <Compile Include="MasterViewController.designer.cs">
+      <DependentUpon>MasterViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlatformSpecific\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <InterfaceDefinition Include="MainStoryboard.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PlanetXamarin.Portable\PlanetXamarin.Portable.csproj">
@@ -105,34 +111,17 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BTProgressHUD">
-      <HintPath>..\Components\btprogresshud-1.8\lib\ios\BTProgressHUD.dll</HintPath>
-    </Reference>
     <Reference Include="GCDiscreetNotification">
-      <HintPath>..\Components\gcdiscreetnotification-1.0\lib\ios\GCDiscreetNotification.dll</HintPath>
+      <HintPath>..\Components\gcdiscreetnotification-1.0.2.2\lib\ios-unified\GCDiscreetNotification.dll</HintPath>
     </Reference>
     <Reference Include="MonoTouch.Dialog-1" />
     <Reference Include="SDWebImage">
-      <HintPath>..\Components\sdwebimage-3.4\lib\ios\SDWebImage.dll</HintPath>
+      <HintPath>..\Components\sdwebimage-3.7.1.2\lib\ios-unified\SDWebImage.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
-  </ItemGroup>
-  <ItemGroup>
-    <XamarinComponentReference Include="btprogresshud">
-      <Visible>False</Visible>
-      <Version>1.8</Version>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="gcdiscreetnotification">
-      <Visible>False</Visible>
-      <Version>1.0</Version>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="sdwebimage">
-      <Visible>False</Visible>
-      <Version>3.4</Version>
-    </XamarinComponentReference>
+    <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default%402x.png" />
@@ -143,5 +132,15 @@
   <ItemGroup>
     <Content Include="Resources\default_person.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="gcdiscreetnotification">
+      <Visible>False</Visible>
+      <Version>1.0.2.2</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sdwebimage">
+      <Visible>False</Visible>
+      <Version>3.7.1.2</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

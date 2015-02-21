@@ -1,59 +1,73 @@
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
 using PlanetXamarin.Portable.ViewModels;
+using System;
+using System.CodeDom.Compiler;
+using System.Threading.Tasks;
+using UIKit;
 using SDWebImage;
 
 namespace PlantXamarin.iOS
 {
-
-
-  [Register("MasterView")]
-  public class MasterViewController : UITableViewController, IUITableViewDataSource
+  partial class MasterViewController : UITableViewController, IUITableViewDataSource, IUITableViewDelegate
   {
     private MasterViewModel viewModel;
+    private UIActivityIndicatorView activityIndicator;
 
-    public MasterViewController()
+
+    public MasterViewController(IntPtr handle)
+      : base(handle)
     {
-      viewModel = new MasterViewModel();
-      this.Title = "Planet Xamarin";
     }
 
-    public override void DidReceiveMemoryWarning()
+    public override void ViewDidLoad()
     {
-      // Releases the view if it doesn't have a superview.
-      base.DidReceiveMemoryWarning();
-
-      // Release any cached data, images, etc that aren't in use.
-    }
-
-
-    public async override void ViewDidLoad()
-    {
-
       base.ViewDidLoad();
+      viewModel = new MasterViewModel();
+
+      viewModel.PropertyChanged += PropertyChanged;
+
       this.TableView.WeakDataSource = this;
-      NavigationItem.RightBarButtonItem = new UIBarButtonItem(UIBarButtonSystemItem.Refresh, async delegate
+      this.TableView.WeakDelegate = this;
+
+      NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
+
+      activityIndicator = new UIActivityIndicatorView(new System.Drawing.RectangleF(0, 0, 20, 20));
+      activityIndicator.ActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.White;
+      activityIndicator.HidesWhenStopped = true;
+      NavigationItem.RightBarButtonItem = new UIBarButtonItem(activityIndicator);
+
+      //Setup refresh control
+      this.RefreshControl = new UIRefreshControl();
+
+      RefreshControl.ValueChanged += async (sender, args) =>
       {
-        LoadArticles();
-      });
+        if (viewModel.IsBusy)
+          return;
+
+        await LoadArticles();
+      };
+
 
       LoadArticles();
     }
 
-    private async void LoadArticles()
+    private async Task LoadArticles()
     {
-      BigTed.BTProgressHUD.Show("Loading...");
       await viewModel.ExecuteLoadItemsCommand();
       TableView.ReloadData();
-      BigTed.BTProgressHUD.Dismiss();
     }
 
-    UITableViewCell IUITableViewDataSource.GetCell(UITableView tableView, NSIndexPath indexPath)
+
+    #region TableView Delegates
+
+    public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
     {
+      var cell = tableView.DequeueReusableCell("rssitem", indexPath);
       var item = viewModel.FeedItems[indexPath.Row];
-      var cell = new UITableViewCell(UITableViewCellStyle.Subtitle, "rssitem");
+
       cell.TextLabel.Text = item.Title;
       cell.DetailTextLabel.Text = item.Caption;
+
       if (item.ShowImage)
       {
         cell.ImageView.SetImage(
@@ -64,19 +78,40 @@ namespace PlantXamarin.iOS
       return cell;
     }
 
-    int IUITableViewDataSource.RowsInSection(UITableView tableView, int section)
+    public override nint RowsInSection(UITableView tableview, nint section)
     {
       return viewModel.FeedItems.Count;
-    }
-
-    public override UITableViewCellAccessory AccessoryForRow(UITableView tableView, NSIndexPath indexPath)
-    {
-      return UITableViewCellAccessory.DisclosureIndicator;
     }
 
     public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
     {
       NavigationController.PushViewController(new DetailViewController(viewModel.FeedItems[indexPath.Row]), true);
+    }
+
+    #endregion
+
+    void PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+      InvokeOnMainThread(() =>
+      {
+        switch (e.PropertyName)
+        {
+          case "IsBusy":
+            {
+              if (viewModel.IsBusy)
+              {
+                RefreshControl.BeginRefreshing();
+                activityIndicator.StartAnimating();
+              }
+              else
+              {
+                RefreshControl.EndRefreshing();
+                activityIndicator.StopAnimating();
+              }
+            }
+            break;
+        }
+      });
     }
   }
 }

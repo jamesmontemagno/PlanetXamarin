@@ -1,5 +1,6 @@
-﻿using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using CoreGraphics;
+using Foundation;
+using UIKit;
 using PlanetXamarin.Portable.Helpers;
 using PlantXamarin.iOS.PlatformSpecific;
 
@@ -8,13 +9,15 @@ namespace PlantXamarin.iOS
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
-    [Register("AppDelegate")]
+    [Foundation.Register("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        // class-level declarations
-        UIWindow window;
-        private UINavigationController navigationController;
 
+      public override UIWindow Window
+      {
+        get;
+        set;
+      }
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -26,15 +29,13 @@ namespace PlantXamarin.iOS
         {
 
             CrossPlatformMessage.Instance = new Message();
-            // create a new window instance based on the screen size
-            window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-            navigationController = new UINavigationController(new MasterViewController());
-            // If you have defined a view, add it here:
-             window.RootViewController  = navigationController;
-
-            // make the window visible
-            window.MakeKeyAndVisible();
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(180, 85, 182); //bar background
+            UINavigationBar.Appearance.TintColor = UIColor.White; //Tint color of button items
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
+            {
+              Font = UIFont.FromName("HelveticaNeue-Light", 20f),
+              TextColor = UIColor.White
+            });
 
             return true;
         }

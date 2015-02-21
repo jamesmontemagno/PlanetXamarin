@@ -1,5 +1,5 @@
 using GCDiscreetNotification;
-using MonoTouch.UIKit;
+using UIKit;
 using PlanetXamarin.Portable.Interfaces;
 
 namespace PlantXamarin.iOS.PlatformSpecific

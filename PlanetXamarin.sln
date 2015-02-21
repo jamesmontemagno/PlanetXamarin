@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetXamarin.Portable", "PlanetXamarin.Portable\PlanetXamarin.Portable.csproj", "{F828D185-9051-4469-A42A-0C551074FD19}"
 EndProject
@@ -68,6 +68,7 @@ Global
 		{F828D185-9051-4469-A42A-0C551074FD19}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{F828D185-9051-4469-A42A-0C551074FD19}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{F828D185-9051-4469-A42A-0C551074FD19}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F828D185-9051-4469-A42A-0C551074FD19}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{F828D185-9051-4469-A42A-0C551074FD19}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{F828D185-9051-4469-A42A-0C551074FD19}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{F828D185-9051-4469-A42A-0C551074FD19}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -279,8 +280,8 @@ Global
 		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|iPhone.Build.0 = Debug|iPhone
 		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
-		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
+		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhoneSimulator
+		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|Mixed Platforms.Build.0 = Debug|iPhoneSimulator
 		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|x64.ActiveCfg = Debug|iPhone
 		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Debug|x86.ActiveCfg = Debug|iPhone
 		{065F74E0-F0AB-4006-BBA1-EFCC7A585ACF}.Release|Any CPU.ActiveCfg = Release|iPhone
